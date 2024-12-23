@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+
+    background: url('back.webp') no-repeat center/cover;
+  }
+main {  font-family: 'Fredoka One', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 50px;}
+  
+  header, section, footer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+  
+  header {
+    background-color: #ff0808 ;
+    color: #ffffff;
+    font-size: 20;
+  }
+  
+  header .nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  header .nav a:hover {
+    color: #ffcb45;
+  }
+
+  .hero {
+    height: 400px;
+    color: #ff0000;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .timer-container {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 45px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  
+  .time-box span {
+    display: block;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  }
+  
+  .label {
+    font-size: 1em;
+    color: #fff;
+    margin-top: 10px;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  }
+  
+  @keyframes glow {
+    0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
+    100% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+  }
+  
+  .time-box span {
+    animation: glow 1.5s infinite;
+  }
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 20px;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh);
+      opacity: 0;
+  }
+}
+
+.gifts-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gift {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: url('Gift.png') no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gift:hover {
+  transform: scale(1.1);
+}
+
+.gift.opened {
+  background: url('GiftO.png') no-repeat center center;
+  background-size: cover;
+}
+
+.message {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 14px;
+  display: none;
+}
+
+.gift.opened .message {
+  display: block;
+}
+
+h3 {margin-top: 220px;}
+.papa {display: flex;
+      justify-content: center;}
+      .envelopes {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .envelope {
+        width: 150px;
+        height: 100px;
+        background: #f3a683;
+        position: relative;
+        cursor: pointer;
+        border: 2px solid #e17055;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+    .envelope:hover {
+        transform: scale(1.1);
+    }
+    .envelope::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: #ff7979;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        z-index: 2;
+        transition: transform 0.5s;
+    }
+    .envelope.opened::before {
+        transform: rotateX(180deg);
+    }
+    .message {
+        display: none;
+        text-align: center;
+        font-size: 16px;
+        color: #2d3436;
+        padding: 10px;
+    }
+    .envelope.opened .message {
+        display: block;
+    }
+    .congrats {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f9ca24;
+      color: #2d3436;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+  }

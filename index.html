@@ -1,0 +1,107 @@
+<html>
+<head>
+  <title>Новогодняя компания</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="New.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">Новогодняя компания</div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+        <div class="hero-content">
+          <h1>Стратегия новогодней компании</h1>
+          <p>На данный момент мы не раскрываем основы стратегии.</p>
+          <a class="btn">Поэтому ждите нового года</a>
+          <div class="timer">
+            
+            <div class="timer-container">
+              <div id="countdown" class="timer">
+                <div class="time-box">
+                  <span id="days">0</span>
+                  <span class="label">Дней</span>
+                </div>
+                <div class="time-box">
+                  <span id="hours">0</span>
+                  <span class="label">Часов</span>
+                </div>
+                <div class="time-box">
+                  <span id="minutes">0</span>
+                  <span class="label">Минут</span>
+                </div>
+                <div class="time-box">
+                  <span id="seconds">0</span>
+                  <span class="label">Секунд</span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <h1>А пока вы ждёте нового года предлагаю вам открыть подарки!</h1>
+        <div class="gifts-container">
+            <div class="gift" data-id="1">
+                <div class="message"></div>
+            </div>
+            <div class="gift" data-id="2">
+                <div class="message"></div>
+            </div>
+            <div class="gift" data-id="3">
+                <div class="message"></div>
+            </div>
+            <div class="gift" data-id="4">
+                <div class="message"></div>
+            </div>
+            <div class="gift" data-id="5">
+                <div class="message"></div>
+            </div>
+            <div class="gift" data-id="5">
+              <div class="message"></div>
+          </div>
+        </div>
+
+        <h3>Кстати я тут подготовил интерактивную игру</h3>
+    <p>Напиши где ты был в этом году</p>
+    <input type="text" id="placeInput" placeholder="Например: парк">
+    <button onclick="askUser()">Отправить</button>
+    <p id="response"></p>
+        <h1>На последок я оставил всем пожелания</h1>
+<div class="papa">
+  <div class="envelopes">
+    <div class="envelope" onclick="openEnvelope(this, 'Нашему любимому учителю, здоровья и хорошие нервы')">
+        <div class="message">Нашему любимому учителю, здоровья и хорошие нервы</div>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(this, 'Дамиру хорошего обучения')">
+        <div class="message">Дамиру хорошего обучения</div>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(this, 'Кириллу желаю закрыть долги!')">
+        <div class="message">Кириллу желаю закрыть долги</div>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(this, 'Саше побольше денег!')">
+        <div class="message">Саше побольше денег</div>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(this, 'Фоме E34!')">
+        <div class="message">Фоме E34</div>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(this, 'Лёве поменьше сидеть до 4 ночи!')">
+        <div class="message">Лёве поменьше сидеть до 4 ночи</div>
+    </div>
+</div>
+
+<div class="congrats" id="congrats"></div>
+</div>
+  </main>
+  <footer>
+    
+  </footer>
+</body>
+  <script src="New.js">
+
+  </script>
+</html>
